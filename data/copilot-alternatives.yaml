@@ -1,0 +1,64 @@
+# Copilot alternatives - the field, as sourced rows.
+#
+# One row per product. Every value carries the URL it came from and the date it
+# was read; a value with no source does not belong in this file. Rows are
+# ordered with the open-source options first, which is a statement about this
+# repository, not a ranking: the comparison that argues a recommendation lives
+# at https://opensourcecopilotalternative.com/kortix-vs-copilot
+schema_version: 1
+checked: 2026-10-21
+rows:
+  - product: Kortix
+    category: AI Operating System
+    open_source: true
+    self_hosted: true
+    deployment: ["Kortix Cloud", "own VPC", "on-prem network"]
+    price: "credits from $50 a month; self-host is free"
+    connectors: "declared per agent in kortix.yaml"
+    agent_definition: "files in a git repository the customer owns"
+    source: "https://kortix.com/pricing"
+    checked: 2026-10-21
+
+  - product: Onyx
+    category: enterprise search assistant
+    open_source: true
+    self_hosted: true
+    deployment: ["Onyx Cloud", "on-premise (Enterprise tier)"]
+    price: "$20 per user per month, annual billing"
+    connectors: "40+ app connectors"
+    agent_definition: "assistants configured in the Onyx UI; actions over MCP and OpenAPI"
+    source: "https://onyx.app/pricing"
+    checked: 2026-10-21
+
+  - product: Microsoft 365 Copilot
+    category: assistant inside Microsoft 365
+    open_source: false
+    self_hosted: false
+    deployment: ["Microsoft cloud tenant"]
+    price: "$30 per user per month paid yearly, $31.50 paid monthly, on top of a qualifying Microsoft 365 plan"
+    connectors: "100+ connectors"
+    agent_definition: "agents built in Copilot Studio, stored inside a Power Platform solution"
+    source: "https://www.microsoft.com/en-us/copilot/solutions/enterprise"
+    checked: 2026-10-21
+
+  - product: Microsoft Copilot Studio
+    category: agent builder inside Power Platform
+    open_source: false
+    self_hosted: false
+    deployment: ["Power Platform environment"]
+    price: "25,000-credit pack, $200 per pack per month"
+    connectors: "1,500+ connectors and MCP servers"
+    agent_definition: "agent created within a Power Platform solution; moved by export, import and pipelines"
+    source: "https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing"
+    checked: 2026-10-21
+
+  - product: Glean
+    category: enterprise search and agents
+    open_source: false
+    self_hosted: false
+    deployment: ["Glean cloud"]
+    price: "not published"
+    connectors: "275+ connectors"
+    agent_definition: "assistants and agents configured in Glean"
+    source: "https://www.glean.com/"
+    checked: 2026-10-21
