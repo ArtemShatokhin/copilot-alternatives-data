@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "copilot-alternatives dataset",
+  "type": "object",
+  "required": ["schema_version", "checked", "rows"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "checked": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+    "rows": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["product", "open_source", "self_hosted", "price", "source", "checked"],
+        "properties": {
+          "product": {"type": "string", "minLength": 1},
+          "category": {"type": "string"},
+          "open_source": {"type": "boolean"},
+          "self_hosted": {"type": "boolean"},
+          "deployment": {"type": "array", "items": {"type": "string"}},
+          "price": {"type": "string", "minLength": 1},
+          "connectors": {"type": "string"},
+          "agent_definition": {"type": "string"},
+          "source": {"type": "string", "pattern": "^https://"},
+          "checked": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
